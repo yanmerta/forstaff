@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-    <style>
+    {{-- <style>
         body {
-            background: url('{{ asset('assets/template_admin/images/gb.jpg') }}') no-repeat center center fixed;
+            background: url('{{ asset('assets/template_admin/images/login/login-background-forStaff.jpg') }}') no-repeat center center fixed;
             background-size: cover;
         }
-    </style>
+    </style> --}}
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ $title }} | Admin</title>
+    <title>{{ $title }} | Forstaff</title>
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -19,19 +19,19 @@
     <link rel="stylesheet" href="{{ asset('assets/template_admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/template_admin/dist/css/adminlte.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/template_admin/dist/css/loading.css') }}">
-    <link href="{{ asset('assets/template_admin/dist/img/logocom.png') }}" rel="icon"
+    <link href="{{ asset('assets/template_admin/images/login/logo-forstaff.png') }}" rel="icon"
         media="(prefers-color-scheme: light)" />
     <link href="{{ asset('assets/template_admin/dist/img/logocom.png') }}" rel="icon"
         media="(prefers-color-scheme: dark)" />
 
-    <link rel="mask-icon" href="{{ asset('assets/template_admin/dist/img/logocom.png') }}" color="#000000">
+    <link rel="mask-icon" href="{{ asset('assets/template_admin/images/login/logo-forstaff.png') }}" color="#000000">
 </head>
 
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
             <a href="{{ route('login') }}">
-                <img src="{{ asset('assets/template_user/assets/img/hub-pasien/logo2.png') }}" class="img-fluid"
+                <img src="{{ asset('assets/template_admin/images/login/logo-forstaff.png') }}" class="img-fluid"
                     width="150" height="auto">
 
                 <br>
@@ -40,7 +40,7 @@
         </div>
         <div class="card">
             <div class="card-body login-card-body">
-                <p class="login-box-msg">Selamat Datang, silahkan login akun Admin anda!
+                <p class="login-box-msg">Selamat Datang, silahkan login akun forstaff anda
                 </p>
                 <!-- Form -->
                 <form action="{{ route('login.proses') }}" method="post" class="form-send">
@@ -66,7 +66,7 @@
 
                     <div class="row">
                         <div class="col-12">
-                            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                            <button type="submit" class="btn btn-primary btn-block">LOGIN</button>
                         </div>
                     </div>
                 </form>
@@ -74,6 +74,10 @@
             </div>
         </div>
     </div>
+    <p class="text-center mt-5 pt-5 mb-0">
+        Development By "<a href="http://redsystem.id/"> Red System </a> " - PT. Guna
+        Teknologi Nusantara
+    </p>
 
     <div class='container-loading d-none'>
         <div class='loader'>

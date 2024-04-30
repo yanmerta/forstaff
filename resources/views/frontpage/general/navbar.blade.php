@@ -3,7 +3,7 @@
         <span>Close</span> <i class="ei ei-icon_close"></i>
     </div>
     <div class="site-logo">
-        <a href="https://www.forstaff.id/" class="logo">
+        <a href="{{ route('index') }}" class="logo">
             <img src="https://www.forstaff.id/assets/assets/img/main-logo-forstaff.png" alt="Forstaff Logo"
                 title="Forstaff Logo" class="main-logo" width="150" height="48" />
             <img src="https://www.forstaff.id/assets/assets/img/sticky-logo-forstaff.png" alt="Forstaff Logo"
@@ -13,26 +13,26 @@
     <div class="menu-wrapper" data-top="992">
         <ul class="site-main-menu">
             <li>
-                <a class="current_page" href="https://www.forstaff.id/">Beranda</a>
+                <a class="current_page" href="{{ route('index') }}">Beranda</a>
             </li>
             <li>
-                <a class="" href="https://www.forstaff.id/fitur">Fitur</a>
+                <a class="" href="{{ route('frontpage.fitur') }}">Fitur</a>
             </li>
             <li>
-                <a class="" href="https://www.forstaff.id/tentang">Tentang</a>
+                <a class="" href="{{ route('frontpage.about') }}">Tentang</a>
             </li>
             <li>
-                <a class="" href="https://www.forstaff.id/harga">Harga</a>
+                <a class="" href="{{ route('frontpage.price') }}">Harga</a>
             </li>
             <li>
-                <a class="" href="https://www.forstaff.id/blog">Blog</a>
+                <a class="" href="{{ route('frontpage.blogs') }}">Blog</a>
             </li>
             <li>
-                <a class="" href="https://www.forstaff.id/kontak-kami">Kontak Kami</a>
+                <a class="" href="{{ route('frontpage.contact') }}">Kontak Kami</a>
             </li>
         </ul>
         <div class="nav-right">
-            <a href="http://app.forstaff.id/" target="_blank" class="nav-btn">Daftar Sekarang</a>
+            <a href="#" target="_blank" class="nav-btn">Daftar Sekarang</a>
         </div>
     </div>
 </nav>
