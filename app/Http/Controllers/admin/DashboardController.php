@@ -11,6 +11,6 @@ class DashboardController extends Controller
             // $data = Home::all();
             // $pageTitle = 'Admin | Dashboard';
             // dd($data);
-            return view('backpage.home.Dashboard');
+            return view('backpage.Dashboard');
         }
     }

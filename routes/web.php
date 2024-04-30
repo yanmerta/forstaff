@@ -1,12 +1,15 @@
 <?php
 
-use App\Http\Controllers\admin\DashboardController;
-use App\Http\Controllers\admin\ProfileController;
 use App\Http\Controllers\admin\AdminController;
-use App\Http\Controllers\admin\LogoutController;
+use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\HomeController;
 use App\Http\Controllers\Admin\LoginController;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\admin\LogoutController;
+use App\Http\Controllers\admin\ProfileController;
+use App\Http\Controllers\FrontpageController;
 use Illuminate\Support\Facades\Route;
+
+
 
 
 
@@ -24,7 +27,7 @@ use Illuminate\Support\Facades\Route;
 
 
 //Login Admin
-Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/', [FrontpageController::class, 'index'])->name('index');
 Route::get('/admin', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'login_proses'])->name('login.proses');
 
@@ -47,5 +50,9 @@ Route::get('/logout', [LogoutController::class, 'process'])->name('logoutProcess
  Route::get('/profile', [ProfileController::class,'index',])->name('profile.index');
  Route::patch('/profile/{id}', [ProfileController::class,'update',])->name('profile.update');
  Route::delete('/admin/profile/{id}/delete-photo', [ProfileController::class, 'deletePhoto'])->name('profile.delete-photo');
+
+  //Home Page 
+  Route::get('/admin/home', [HomeController::class, 'index'])->name('home.index');
+  Route::put('/home/{id}', [HomeController::class, 'update'])->name('home.update');
 });
 

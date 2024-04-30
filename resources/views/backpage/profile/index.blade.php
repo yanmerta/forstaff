@@ -54,7 +54,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 @if ($user->photo)
-                                    <img src="{{ asset('public/' . $user->photo) }}"
+                                    <img src="{{ asset('/storage/public/' . $user->photo) }}"
                                         class="img-thumbnail rounded mx-auto d-block">
                                 @else
                                     <img alt="Logo" src="{{ asset('assets/template_admin/dist/img/blank.png') }}"
