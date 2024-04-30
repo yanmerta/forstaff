@@ -17,7 +17,7 @@
                     class="img-circle elevation-2" alt="User Image"> --}}
                 @if (Auth::check())
                     @if (Auth::user()->photo)
-                        <img src="{{ asset('public/' . Auth::user()->photo) }}" class="img-circle elevation-2"
+                        <img src="{{ asset('/storage/public/' . Auth::user()->photo) }}" class="img-circle elevation-2"
                             style="border-radius: 50%; object-fit: cover; object-position: center; width: 40px; height: 42px;"
                             alt="User Image">
                     @else
@@ -73,9 +73,9 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('admin.home.index') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Invoice</p>
+                                <p>Beranda</p>
                             </a>
                         </li>
                         <li class="nav-item">

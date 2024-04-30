@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\HomeController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\admin\LogoutController;
 use App\Http\Controllers\admin\ProfileController;
@@ -9,8 +10,8 @@ use App\Http\Controllers\User\AboutPageController;
 use App\Http\Controllers\User\BlogsPageController;
 use App\Http\Controllers\User\ContactUsController;
 use App\Http\Controllers\User\FiturPageController;
-use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\User\PricePageController;
+use App\Http\Controllers\FrontpageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,7 +26,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Frontpage
-Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/fitur', [FiturPageController::class, 'fitur'])->name('frontpage.fitur');
 Route::get('/about', [AboutPageController::class, 'about'])->name('frontpage.about');
 Route::get('/price', [PricePageController::class, 'price'])->name('frontpage.price');
@@ -33,6 +33,7 @@ Route::get('/blogs', [BlogsPageController::class, 'blogs'])->name('frontpage.blo
 Route::get('/contact', [ContactUsController::class, 'contact'])->name('frontpage.contact');
 
 //Login Admin
+Route::get('/', [FrontpageController::class, 'index'])->name('index');
 Route::get('/admin', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'login_proses'])->name('login.proses');
 
@@ -55,5 +56,8 @@ Route::get('/logout', [LogoutController::class, 'process'])->name('logoutProcess
  Route::get('/profile', [ProfileController::class,'index',])->name('profile.index');
  Route::patch('/profile/{id}', [ProfileController::class,'update',])->name('profile.update');
  Route::delete('/admin/profile/{id}/delete-photo', [ProfileController::class, 'deletePhoto'])->name('profile.delete-photo');
-});
 
+  //Home Page
+  Route::get('/admin/home', [HomeController::class, 'index'])->name('home.index');
+  Route::put('/home/{id}', [HomeController::class, 'update'])->name('home.update');
+});
