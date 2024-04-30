@@ -1,10 +1,10 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-        <img src="{{ asset('assets/template_admin/dist/img/forstaff.png') }}" alt="AdminLTE Logo"
+        <img src="{{ asset('assets/template_admin/dist/img/logo_forstaff.png') }}" alt="AdminLTE Logo"
             class="brand-image img-circle elevation-3">
         <span class="brand-text font-weight-light">
-            <h3>Forstaff</h3>
+            <h2>Forstaff</h2>
         </span>
     </a>
 

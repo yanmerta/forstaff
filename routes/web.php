@@ -6,13 +6,13 @@ use App\Http\Controllers\admin\HomeController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\admin\LogoutController;
 use App\Http\Controllers\admin\ProfileController;
+use App\Http\Controllers\User\AboutPageController;
+use App\Http\Controllers\User\BlogsPageController;
+use App\Http\Controllers\User\ContactUsController;
+use App\Http\Controllers\User\FiturPageController;
+use App\Http\Controllers\User\PricePageController;
 use App\Http\Controllers\FrontpageController;
 use Illuminate\Support\Facades\Route;
-
-
-
-
-
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +25,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Frontpage
+Route::get('/fitur', [FiturPageController::class, 'fitur'])->name('frontpage.fitur');
+Route::get('/about', [AboutPageController::class, 'about'])->name('frontpage.about');
+Route::get('/price', [PricePageController::class, 'price'])->name('frontpage.price');
+Route::get('/blogs', [BlogsPageController::class, 'blogs'])->name('frontpage.blogs');
+Route::get('/contact', [ContactUsController::class, 'contact'])->name('frontpage.contact');
 
 //Login Admin
 Route::get('/', [FrontpageController::class, 'index'])->name('index');
